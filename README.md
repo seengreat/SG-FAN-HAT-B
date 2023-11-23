@@ -106,7 +106,7 @@ After the program is run, SG-FAN-HAT-B will enter the automatic mode, and the MO
 |40℃ =< T < 50℃	|50%	|The first 2 LEDs on the left are on	|（127，255，255）|
 |50℃ =< T < 55℃	|75%	|The first 3 LEDs on the left are on	|（255，255，0）|
 |55℃ =< T < 60℃	|90%	|All 4 LEDs are on	|（255，127，0）|
-|60℃ =< T	|100%	|All 4 LEDs are on	|（255，0，0）|
+|60℃ =< T	|100%	|All 4 LEDs are on	|（255，0，0）| <br>
 3）Switch Functionality<br>
 Move the fan and RGB LED switches from "ON" to "OFF" position. Check if the fan and RGB LEDs have turned off. If they haven't turned off, it indicates an issue.<br>
 4）Temperature Control Test<br>
