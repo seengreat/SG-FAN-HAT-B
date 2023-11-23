@@ -92,6 +92,8 @@ View connected I2C devices<br>
 i2cdetect -y 1<br>
 If you see an address representing successful connection between the fan board and Raspberry Pi, the default address is 0x0b.<br>
 ## 2.6、Run the demo codes
+1）Install the SG-FAN-HAT-B correctly onto the Raspberry Pi and power up the Raspberry Pi. Make sure the fan switch and RGB LED switch are set to "ON."<br>
+2）run python program：<br>
 Run the Python program:<br>
 sudo python3 xxx  #xxx is the python file path<br>
 Or run the C program:<br>
@@ -100,13 +102,15 @@ sudo make clean<br>
 sudo make<br>
 sudo ./main<br>
 After the program is run, SG-FAN-HAT-B will enter the automatic mode, and the MODE_LED on the board will light up.The program will print the current CPU temperature every 0.5 seconds. The fan speed will be automatically adjusted based on the CPU temperature. There are four onboard LEDs and six RGB LEDs at the bottom, which will display different statuses based on the CPU temperature. The temperature values and their corresponding statuses are shown in Table 1 below:<br>
-|CPU Temperature ：T	|Fan Speed (Percentage)	|Fan Speed LED Indicator	|RGB LED Effect (RGB Encoding)|
-|----------------------------------|---------------------------------|----------------------------------|----------------------|
-|T<40℃	|40%	|The first 2 LEDs on the left are on	|Random color encoding|
-|40℃ =< T < 50℃	|50%	|The first 2 LEDs on the left are on	|（127，255，255）|
-|50℃ =< T < 55℃	|75%	|The first 3 LEDs on the left are on	|（255，255，0）|
-|55℃ =< T < 60℃	|90%	|All 4 LEDs are on	|（255，127，0）|
-|60℃ =< T	|100%	|All 4 LEDs are on	|（255，0，0）| <br>
+|CPU Temperature ：T  |Fan Speed (Percentage) |Fan Speed LED Indicator  |RGB LED Effect (RGB Encoding)|
+|-------------------------|-------------------------- |----------------------------|----------------------------------|
+|T<40℃	                    |40%	                          |The first 2 LEDs on the left are on	|Random color encoding|
+|40℃ =< T < 50℃	    |50%	                          |The first 2 LEDs on the left are on	|（127，255，255）|
+|50℃ =< T < 55℃	    |75%	                          |The first 3 LEDs on the left are on	|（255，255，0）|
+|55℃ =< T < 60℃	    |90%	                          |All 4 LEDs are on	                |（255，127，0）|
+|60℃ =< T	    |100%	                          |All 4 LEDs are on	                |（255，0，0）| 
+                                                            Table 1 <br>
+
 3）Switch Functionality<br>
 Move the fan and RGB LED switches from "ON" to "OFF" position. Check if the fan and RGB LEDs have turned off. If they haven't turned off, it indicates an issue.<br>
 4）Temperature Control Test<br>
