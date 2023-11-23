@@ -13,8 +13,8 @@ The Raspberry Pi cooling fan is a dedicated cooling solution designed for the Ra
 Onboard power conversion circuit, supporting a wide range of DC voltage input from 7 to 28V, can simultaneously power the Raspberry Pi mainboard.
 Independent control switches for the onboard fan and full-color RGB LEDs.
 ## 1.3、Parameters
-|----------------------|------------------------------------|
 |Dimensions	|65mm (length) * 56.5mm (width)|
+|----------------------|------------------------------------|
 |Input Voltage	|5V|
 |Logic Voltage	|3.3V|
 |Driver Chip	|STM32F030F4P6 |
@@ -29,7 +29,7 @@ Figure 2-1: SG-FAN-HAT-B Resource Overview Front View<br>
 ![image](https://github.com/seengreat/SG-FAN-HAT-B/blob/main/pic2.png)<br>
 Figure 2-2: SG-FAN-HAT-B Resource Overview Back View<br>
 ①　DC-044 power input Jack, input voltage can be DC 7-28V   <br>
-②　Fan switch    <br>   
+②　Fan switch<br>
 ③　RGB LED WS2812 switch  <br>
 ④　5V power indicator <br>
 ⑤　Fan speed indicators <br>
@@ -100,8 +100,8 @@ sudo make clean<br>
 sudo make<br>
 sudo ./main<br>
 After the program is run, SG-FAN-HAT-B will enter the automatic mode, and the MODE_LED on the board will light up.The program will print the current CPU temperature every 0.5 seconds. The fan speed will be automatically adjusted based on the CPU temperature. There are four onboard LEDs and six RGB LEDs at the bottom, which will display different statuses based on the CPU temperature. The temperature values and their corresponding statuses are shown in Table 1 below:<br>
-|----------------------------------|---------------------------------|----------------------------------|----------------------|
 |CPU Temperature ：T	|Fan Speed (Percentage)	|Fan Speed LED Indicator	|RGB LED Effect (RGB Encoding)|
+|----------------------------------|---------------------------------|----------------------------------|----------------------|
 |T<40℃	|40%	|The first 2 LEDs on the left are on	|Random color encoding|
 |40℃ =< T < 50℃	|50%	|The first 2 LEDs on the left are on	|（127，255，255）|
 |50℃ =< T < 55℃	|75%	|The first 3 LEDs on the left are on	|（255，255，0）|
